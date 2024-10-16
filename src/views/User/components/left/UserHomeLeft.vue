@@ -95,10 +95,10 @@ const jumpPassword = () => {
                 <template #title>我的标签</template>
             </el-menu-item>
             <!-- 菜单4 -->
-            <el-menu-item index="3" @click="jumpEmpty">
+            <!-- <el-menu-item index="3" @click="jumpEmpty">
                 <el-icon><ChatLineSquare /></el-icon>
                 <template #title>所有评论</template>
-            </el-menu-item>
+            </el-menu-item> -->
             <!-- 菜单5 -->
             <el-sub-menu index="4">
                 <template #title>

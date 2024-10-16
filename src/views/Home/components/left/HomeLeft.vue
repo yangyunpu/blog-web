@@ -18,7 +18,7 @@ console.log('获取account', account);
 const router = useRouter();
 const createArticle = () => {
     console.log('获取code1', code.value);
-    if ( code == 1) {
+    if ( code.value == 1) {
         console.log('获取code2', code.value);
         router.push({
             path: '/editor',

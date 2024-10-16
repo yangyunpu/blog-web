@@ -50,12 +50,11 @@ const handleSelect = (key: string, keyPath: string[]) => {
 
 <template>
   <!-- 主导航栏 -->
-  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :ellipsis="false" @select="handleSelect">
+  <!-- <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :ellipsis="false" @select="handleSelect"> -->
+  <el-menu class="el-menu-demo" mode="horizontal" :ellipsis="false" @select="handleSelect">
     <!-- <img style="height: 50px;margin-top: 6px;" src="@/assets/imgs/logo.png"> -->
     <el-menu-item index="0" style="font-weight:bolder;"><span style="margin-right: 6px;">YOUNG</span> FORUM</el-menu-item>
-    <div class="flex-grow" />
     <!-- 副导航栏 -->
-
     <el-menu-item index="2" v-if="code != 1">登录以查看更多</el-menu-item>
     <el-sub-menu index="3" v-else>
       <!-- 用户信息 -->
@@ -65,18 +64,12 @@ const handleSelect = (key: string, keyPath: string[]) => {
       <el-menu-item index="2-3">退出登录</el-menu-item>
     </el-sub-menu>
 
-    <!-- <el-sub-menu index="4">
-      <template #title>关于</template>
-      <el-menu-item index="4-1">关于站点</el-menu-item>
-      <el-menu-item index="4-2">用户手册</el-menu-item>
-      <el-menu-item index="4-3">隐私信息</el-menu-item>
-    </el-sub-menu> -->
-
   </el-menu>
 </template>
 
 <style>
-.flex-grow {
-  flex-grow: 1;
+.el-menu-demo{
+  display: flex;
+  justify-content: space-between;
 }
 </style>

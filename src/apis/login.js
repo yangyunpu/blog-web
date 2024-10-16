@@ -11,7 +11,7 @@ import httpInstance from "@/utils/request";
 //登录请求
 export function login(loginPara){
     return httpInstance({
-        url:'/api/user/login/',
+        url:'/user/login/',
         method:'post',
         data:loginPara
     })
@@ -19,7 +19,7 @@ export function login(loginPara){
 // 根据id 获取用户信息
 export function getUserInfoById(id) {
     return httpInstance({
-        url: `/api/user/getUserInfoById/${id}`,
+        url: `/user/getUserInfoById/${id}`,
         method: 'get'
     });
 }

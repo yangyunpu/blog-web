@@ -7,13 +7,7 @@
 
 import httpInstance from "@/utils/request";
 
-//获取用户标签信息
-export function getUserTagList(){
-    return httpInstance({
-        url:`/tag/tagList`,
-        method:'get',
-    })
-}
+
 
 export function getUserArticleList(){
     return httpInstance({
@@ -24,37 +18,52 @@ export function getUserArticleList(){
 
 
 
-// 更新标签值
-export function updateTagName(tag){
-    return httpInstance({
-        url:`/tag`,
-        method:'put',
-        data:tag
-    })
-}
 
-// 删除一个标签
-export function deleteTag(tagId) {
+
+
+
+// yyp
+//获取用户标签信息(分页)
+export function getUserTagList(data){
     return httpInstance({
-        url:`/tag/${tagId}`,
-        method:'delete',
+        url:`/tag/getTagList`,
+        method:'post',
+        data: data
     })
 }
 
 // 新增标签
 export function postNewTag(tag){
     return httpInstance({
-        url:`/tag`,
+        url:`/tag/add`,
         method:'post',
+        data: tag
+    })
+}
+
+// 更新标签值
+export function updateTagName(tag){
+    return httpInstance({
+        url:`/tag/update`,
+        method:'put',
         data:tag
     })
 }
 
-// yyp
+// 删除一个标签
+export function deleteTag(data) {
+    return httpInstance({
+        url:`/tag/delete`,
+        method:'post',
+        data
+    })
+}
+
+
 // 获取当前登录人的信息(重复api/login.js  getUserInfoById)
 export function getUserInfo(id){
     return httpInstance({
-        url:`/api/user/getUserInfoById/${id}`,
+        url:`/user/getUserInfoById/${id}`,
         method:'get',
     })
 }
@@ -62,7 +71,7 @@ export function getUserInfo(id){
 // 用户修改密码
 export function updateUserPassword(data){
     return httpInstance({
-        url:'/api/user/updatePassword',
+        url:'/user/updatePassword',
         method:'put',
         data: data
     })
@@ -71,7 +80,7 @@ export function updateUserPassword(data){
 // 用户修改个人信息 （更新用户信息）
 export function updateUserInfo(data){
     return httpInstance({
-        url:'/api/user/updateOwnUserInfo',
+        url:'/user/updateOwnUserInfo',
         method:'put',
         data: data
     })

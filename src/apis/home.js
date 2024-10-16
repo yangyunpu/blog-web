@@ -10,7 +10,7 @@ import httpInstance from "@/utils/request";
 // 热评
 export function getIndexHot(){
     return httpInstance({
-        url:'/api/index/hot',
+        url:'/index/hot',
         method:'get',
     })
 }
@@ -19,7 +19,7 @@ export function getIndexHot(){
 // 首页获取文章列表
 export function getArticleList(article) {
     return httpInstance({
-        url: `/api/article/getArticleList`,
+        url: `/article/getArticleList`,
         method: 'post',
         data:article
     });

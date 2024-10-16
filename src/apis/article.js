@@ -23,7 +23,7 @@ export function getArticleDetails(aid) {
 // 获取分类字典
 export function getCategoryDictionary() {
     return httpInstance({
-        url: `/api/Category/getCategoryDictionary`,
+        url: `/Category/getCategoryDictionary`,
         method: 'get'
     });
 }
@@ -31,7 +31,7 @@ export function getCategoryDictionary() {
 // 获取标签字典
 export function getTagDictionary() {
     return httpInstance({
-        url: `/api/tag/getTagDictionary`,
+        url: `/tag/getTagDictionary`,
         method: 'get'
     });
 }
@@ -39,7 +39,7 @@ export function getTagDictionary() {
 // 新增文章
 export function addArticle(data) {
     return httpInstance({
-        url: `/api/article/add`,
+        url: `/article/add`,
         method: 'post',
         data: data
     });
@@ -48,7 +48,7 @@ export function addArticle(data) {
 // 修改文章
 export function editArticle(data) {
     return httpInstance({
-        url: `/api/article/update`,
+        url: `/article/update`,
         method: 'put',
         data: data
     });
@@ -57,7 +57,7 @@ export function editArticle(data) {
 // 用户删除这篇文章
 export function deleteArt(id, status) {
     return httpInstance({
-        url: `/api/article/delete/${id}/${status}`,
+        url: `/article/delete/${id}/${status}`,
         method: 'delete',
     });
 }
@@ -65,7 +65,7 @@ export function deleteArt(id, status) {
 // 获取主页文章信息
 export function getHomeArticleDetails(aid) {
     return httpInstance({
-        url: `/api/article/getArticleById/${aid}`,
+        url: `/article/getArticleById/${aid}`,
         method: 'get'
     });
 }
@@ -73,7 +73,7 @@ export function getHomeArticleDetails(aid) {
 // 文章点赞(成功后，加载 addLike 接口)
 export function articleLike(aid) {
     return httpInstance({
-        url: `/api/article/like/${aid}`,
+        url: `/article/like/${aid}`,
         method: 'put'
     });
 }
@@ -81,7 +81,7 @@ export function articleLike(aid) {
 // 取消文章点赞(取消成功后，加载 cancelLike 接口)
 export function cancelArticleLike(aid) {
     return httpInstance({
-        url: `/api/article/cancelLike/${aid}`,
+        url: `/article/cancelLike/${aid}`,
         method: 'put'
     });
 }
@@ -89,7 +89,7 @@ export function cancelArticleLike(aid) {
 // 文章点赞
 export function addLike(data) {
     return httpInstance({
-        url: `/api/like/addLike`,
+        url: `/like/addLike`,
         method: 'post',
         data: data
     });
@@ -98,7 +98,7 @@ export function addLike(data) {
 /** 判断当前用户是否点赞了 */
 export function getIsLikeByIdAndType(data) {
     return httpInstance({
-        url: `/api/like/getIsLikeByIdAndType`,
+        url: `/like/getIsLikeByIdAndType`,
         method: 'post',
         data: data
     });
@@ -107,7 +107,7 @@ export function getIsLikeByIdAndType(data) {
 // 取消点赞
 export function cancelLike(data) {
     return httpInstance({
-        url: `/api/like/cancelLike`,
+        url: `/like/cancelLike`,
         method: 'post',
         data: data
     });
@@ -116,7 +116,7 @@ export function cancelLike(data) {
 // 获取所有的分类信息
 export function getTypes() {
     return httpInstance({
-        url: `/api/tag/getTagDictionary`,
+        url: `/tag/getTagDictionary`,
         method: 'get',
     });
 }
@@ -124,7 +124,7 @@ export function getTypes() {
 // 获取获取热门文章
 export function getHotArticle() {
     return httpInstance({
-        url: `/api/article/getHotArticle`,
+        url: `/article/getHotArticle`,
         method: 'get'
     });
 }
@@ -133,7 +133,7 @@ export function getHotArticle() {
 // 获取父级评论
 export function frontGetParentComment(data) {
     return httpInstance({
-        url: `/api/comment/frontGetParentComment`,
+        url: `/comment/frontGetParentComment`,
         method: 'post',
         data: data
     });
@@ -142,7 +142,7 @@ export function frontGetParentComment(data) {
 // 获取子级评论
 export function frontGetChildrenComment(data) {
     return httpInstance({
-        url: `/api/comment/frontGetChildrenComment`,
+        url: `/comment/frontGetChildrenComment`,
         method: 'post',
         data: data
     });
@@ -151,7 +151,7 @@ export function frontGetChildrenComment(data) {
 // 发表评论（父级）
 export function addComment(data) {
     return httpInstance({
-        url: `/api/comment/add`,
+        url: `/comment/add`,
         method: 'post',
         data: data
     });
@@ -160,7 +160,7 @@ export function addComment(data) {
 // 回复评论信息（子级）
 export function applyComment(send) {
     return httpInstance({
-        url: `/api/comment/apply`,
+        url: `/comment/apply`,
         method: 'post',
         data: send
     });
@@ -169,7 +169,7 @@ export function applyComment(send) {
 // 删除评论信息
 export function deleteComment(id, parent_id = 0) {
     return httpInstance({
-        url: `/api/comment/delete/${id}/${parent_id}`,
+        url: `/comment/delete/${id}/${parent_id}`,
         method: 'delete',
     });
 }

@@ -6,6 +6,7 @@ import { stringify } from "qs";
 
 // 创建一个 axios 实例
 const httpInstance = axios.create({
+  baseURL: "https://blog-server-jet.vercel.app",
   timeout: 10000, // 请求超时时间毫秒
   withCredentials: true, // 异步请求携带cookie
   headers: {

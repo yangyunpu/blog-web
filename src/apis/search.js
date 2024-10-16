@@ -10,7 +10,7 @@ import httpInstance from "@/utils/request";
 // 与搜索有关的文章
 export function getSearch(data) {
     return httpInstance({
-        url: `/api/article/getArticleListByContent`,
+        url: `/article/getArticleListByContent`,
         method: 'post',
         data
     });
